@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react starter</title>
+</head>
+<body>
+    <div class="root"></div> 
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel"> // without it the browser wont be changing js to text
+    const rootElement = document.querySelector('.root')
+    
+    
+    // header section goes here 
+    // for react "for" becomes "htmlFor" class becomes className etc
+
+    // style for header
+    // style
+    const headerStyles = {
+        backgroundColor: '#61DBFB',
+        fontFamily: 'Helvetica Neue',
+        padding: 25,
+        lineHeight: 1.5
+      }
+
+      // JSX element, header
+      const header = (
+        <header style={headerStyles}>
+          <div className='header-wrapper'>
+            <h1>Getting Started React</h1>
+            <h2>JavaScript Library</h2>
+            <h3>Asabeneh Yetayeh</h3>
+            <p>Feb 10, 2020</p>
+          </div>
+        </header>
+      )
+
+    // main section goes here 
+    const mainStyles ={
+        backgroundColor :'#342186',
+        fontFamily :'Helvetica Neue',
+        padding:25,
+        lineHeight :1,
+        fontSize:20
+    }
+ const main = <main style = {mainStyles}>
+ <p>pre reqs of react</p>
+ <ul>
+     <li>HTML</li>
+     <li>css</li>
+     <li>js</li>
+ </ul>
+ 
+ 
+ </main>
+    // footer goes here 
+    const footerStyles = { 
+        backgroundColor:'#555124'
+    }
+const footer= <footer style={footerStyles}>
+<p>copyright 2020</p>
+</footer>
+// app data goes here 
+
+const app= <app>
+{header}
+{main}
+{footer}
+
+
+
+</app>
+
+    ReactDOM.render(app,rootElement)
+
+</script>
+</body>
+</html>
